@@ -226,7 +226,7 @@ var SearchImageModel = Backbone.Model.extend({
     'product_set_id': '',
     'product_category': 'homegoods',
     'max_items': 10,
-    'model_version': 'builtin/latest',
+    'model_version': 'builtin/experiment4',
     'bounding_poly': '',
     'error': '',
     'index_time': '',
@@ -787,7 +787,7 @@ const SearchImageConfigView = Backbone.View.extend({
     }.bind(this));
     this.$('#model').change(function(e) {
       this.model.set(
-          'model_version', $(e.target).is(':checked') ? $(e.target).val() : '');
+          'model_version', $(e.target).val());
     }.bind(this));
     return this;
   },
